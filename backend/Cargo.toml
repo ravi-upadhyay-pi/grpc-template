@@ -1,0 +1,17 @@
+[package]
+name = "hello_world"
+version = "0.0.0"
+edition = '2018'
+
+[[bin]]
+name="hello_world"
+path = "main.rs"
+
+[dependencies]
+tonic = "0.6"
+tonic-web = "0.2.0"
+prost = "0.9"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+
+[build-dependencies]
+tonic-build = "0.6"
