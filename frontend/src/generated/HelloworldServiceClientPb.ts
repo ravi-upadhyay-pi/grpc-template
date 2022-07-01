@@ -35,7 +35,7 @@ export class GreeterClient {
     this.options_ = options;
   }
 
-  methodInfoSayHello = new grpcWeb.MethodDescriptor(
+  methodDescriptorSayHello = new grpcWeb.MethodDescriptor(
     '/helloworld.Greeter/SayHello',
     grpcWeb.MethodType.UNARY,
     helloworld_pb.HelloRequest,
@@ -67,7 +67,7 @@ export class GreeterClient {
           '/helloworld.Greeter/SayHello',
         request,
         metadata || {},
-        this.methodInfoSayHello,
+        this.methodDescriptorSayHello,
         callback);
     }
     return this.client_.unaryCall(
@@ -75,7 +75,7 @@ export class GreeterClient {
       '/helloworld.Greeter/SayHello',
     request,
     metadata || {},
-    this.methodInfoSayHello);
+    this.methodDescriptorSayHello);
   }
 
 }
