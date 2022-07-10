@@ -1,0 +1,28 @@
+syntax = "proto2";
+package service;
+
+message String {
+    required string id = 1;
+    required string string = 2;
+}
+
+message Page {
+    required int64 page_number = 1;
+    required int64 page_size = 2;
+}
+
+message GetStringsResponse {
+    repeated String string = 1;
+}
+
+message GetStringsCountResponse {
+    required int64 strings_count = 1;
+}
+
+message Void {}
+
+service Service {
+    rpc SaveString(String) returns (Void);
+    rpc GetStringsCount(Void) returns (GetStringsCountResponse);
+    rpc GetStrings(Page) returns (GetStringsResponse);
+}
