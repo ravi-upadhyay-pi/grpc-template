@@ -1,13 +1,13 @@
 use crate::server::Server;
 use crate::strings_service::StringsService;
 use tonic::{Request, Response, Status};
-use crate::proto::service_server::Service;
+use crate::proto::grpc_template_server::GrpcTemplate;
 use crate::proto::{String, Void, Page, GetStringsResponse, GetStringsCountResponse};
 
 type TonicResult<T> = Result<Response<T>, Status>;
 
 #[tonic::async_trait]
-impl Service for Server {
+impl GrpcTemplate for Server {
     async fn save_string(&self, request: Request<String>) -> TonicResult<Void> {
         StringsService::save_string(
             &self, 

@@ -1,5 +1,5 @@
 syntax = "proto2";
-package service;
+package grpc_template;
 
 message String {
     required string id = 1;
@@ -21,7 +21,7 @@ message GetStringsCountResponse {
 
 message Void {}
 
-service Service {
+service GrpcTemplate {
     rpc SaveString(String) returns (Void);
     rpc GetStringsCount(Void) returns (GetStringsCountResponse);
     rpc GetStrings(Page) returns (GetStringsResponse);

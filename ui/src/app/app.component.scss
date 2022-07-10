@@ -1,0 +1,19 @@
+.create-string-container {
+    width: 500px;
+    margin-top: 24px;
+    margin-inline: auto;
+
+    mat-form-field {
+        display: block;
+    }
+}
+
+.existing-strings {
+    width: 500px;
+    margin-top: 24px;
+    margin-inline: auto;
+
+    table {
+        width: 100%;
+    }
+}

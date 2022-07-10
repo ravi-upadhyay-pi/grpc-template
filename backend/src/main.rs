@@ -1,5 +1,5 @@
 pub mod proto {
-    tonic::include_proto!("service");
+    tonic::include_proto!("grpc_template");
 }
 pub mod error;
 pub mod server;
@@ -7,8 +7,9 @@ pub mod strings_service;
 pub mod tonic_service;
 
 use crate::server::{Server};
+use crate::strings_service::{StringsService};
 use tonic::transport::Server as TonicServer;
-use proto::service_server::ServiceServer;
+use proto::grpc_template_server::GrpcTemplateServer;
 use rusqlite::Connection;
 use std::sync::Mutex;
 
@@ -20,7 +21,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let server = Server {
         sqlite_connection, 
     };
-    let service = ServiceServer::new(server);
+    StringsService::create_table(&server)?;
+    let service = GrpcTemplateServer::new(server);
     let web_serevice = tonic_web::enable(service);
     TonicServer::builder()
         .accept_http1(true)
