@@ -12,7 +12,6 @@ import { PageEvent } from '@angular/material/paginator';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
-  title = 'ui';
   readonly client: GrpcTemplateClient;
   readonly newStringId = new FormControl('');
   readonly newStringValue = new FormControl('');

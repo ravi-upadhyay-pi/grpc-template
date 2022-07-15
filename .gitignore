@@ -5,7 +5,7 @@ release
 backend/target
 
 # ui directories
-ui/node_modules
+ui/node_modules/
 ui/dist
 ui/dist-ssr
 ui/*.local
