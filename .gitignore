@@ -3,6 +3,7 @@ release
 
 # server directories
 backend/target
+backend/*.db3
 
 # ui directories
 ui/node_modules/

@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { String as ProtoString, Void, Page } from '../generated/grpc_template_pb';
 import { GrpcTemplateClient } from '../generated/Grpc_templateServiceClientPb';
 import { FormControl } from '@angular/forms';
-import { BehaviorSubject, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { PageEvent } from '@angular/material/paginator';
 
 @Component({

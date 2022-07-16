@@ -1,151 +1,239 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppComponent should create the app 1`] = `
-AppComponent {
-  "__ngContext__": 0,
-  "client": GrpcTemplateClient {
-    "client_": Z {
-      "a": "text",
-      "b": Array [],
-      "c": null,
-      "f": false,
-      "g": false,
-      "h": Array [],
-    },
-    "credentials_": Object {},
-    "hostname_": "",
-    "methodDescriptorGetStrings": E {
-      "a": "unary",
-      "b": [Function],
-      "c": [Function],
-      "f": [Function],
-      "g": [Function],
-      "name": "/grpc_template.GrpcTemplate/GetStrings",
-    },
-    "methodDescriptorGetStringsCount": E {
-      "a": "unary",
-      "b": [Function],
-      "c": [Function],
-      "f": [Function],
-      "g": [Function],
-      "name": "/grpc_template.GrpcTemplate/GetStringsCount",
-    },
-    "methodDescriptorSaveString": E {
-      "a": "unary",
-      "b": [Function],
-      "c": [Function],
-      "f": [Function],
-      "g": [Function],
-      "name": "/grpc_template.GrpcTemplate/SaveString",
-    },
-    "options_": Object {
-      "format": "text",
-    },
-  },
-  "existingStringsCount": BehaviorSubject {
-    "_value": 0,
-    "closed": false,
-    "currentObservers": null,
-    "hasError": false,
-    "isStopped": false,
-    "observers": Array [],
-    "thrownError": null,
-  },
-  "fetchingStrings": BehaviorSubject {
-    "_value": true,
-    "closed": false,
-    "currentObservers": null,
-    "hasError": false,
-    "isStopped": false,
-    "observers": Array [],
-    "thrownError": null,
-  },
-  "newStringId": FormControl2 {
-    "_composedAsyncValidatorFn": null,
-    "_composedValidatorFn": null,
-    "_hasOwnPendingAsyncValidator": false,
-    "_onChange": Array [],
-    "_onCollectionChange": [Function],
-    "_onDisabledChange": Array [],
-    "_parent": null,
-    "_pendingChange": false,
-    "_pendingDirty": false,
-    "_pendingTouched": false,
-    "_pendingValue": "",
-    "_rawAsyncValidators": null,
-    "_rawValidators": null,
-    "defaultValue": null,
-    "errors": null,
-    "pristine": true,
-    "status": "VALID",
-    "statusChanges": EventEmitter_ {
-      "__isAsync": false,
-      "closed": false,
-      "currentObservers": null,
-      "hasError": false,
-      "isStopped": false,
-      "observers": Array [],
-      "thrownError": null,
-    },
-    "touched": false,
-    "value": "",
-    "valueChanges": EventEmitter_ {
-      "__isAsync": false,
-      "closed": false,
-      "currentObservers": null,
-      "hasError": false,
-      "isStopped": false,
-      "observers": Array [],
-      "thrownError": null,
-    },
-  },
-  "newStringValue": FormControl2 {
-    "_composedAsyncValidatorFn": null,
-    "_composedValidatorFn": null,
-    "_hasOwnPendingAsyncValidator": false,
-    "_onChange": Array [],
-    "_onCollectionChange": [Function],
-    "_onDisabledChange": Array [],
-    "_parent": null,
-    "_pendingChange": false,
-    "_pendingDirty": false,
-    "_pendingTouched": false,
-    "_pendingValue": "",
-    "_rawAsyncValidators": null,
-    "_rawValidators": null,
-    "defaultValue": null,
-    "errors": null,
-    "pristine": true,
-    "status": "VALID",
-    "statusChanges": EventEmitter_ {
-      "__isAsync": false,
-      "closed": false,
-      "currentObservers": null,
-      "hasError": false,
-      "isStopped": false,
-      "observers": Array [],
-      "thrownError": null,
-    },
-    "touched": false,
-    "value": "",
-    "valueChanges": EventEmitter_ {
-      "__isAsync": false,
-      "closed": false,
-      "currentObservers": null,
-      "hasError": false,
-      "isStopped": false,
-      "observers": Array [],
-      "thrownError": null,
-    },
-  },
-  "strings": BehaviorSubject {
-    "_value": Array [],
-    "closed": false,
-    "currentObservers": null,
-    "hasError": false,
-    "isStopped": false,
-    "observers": Array [],
-    "thrownError": null,
-  },
+DebugElement {
+  "nativeNode": <div
+    id="root0"
+  >
+    <mat-card
+      class="mat-card mat-focus-indicator create-string-container"
+    >
+      <mat-card-title
+        class="mat-card-title"
+      >
+        Create new String
+      </mat-card-title>
+      <mat-card-content
+        class="mat-card-content"
+      >
+        <mat-form-field
+          appearance="fill"
+          class="mat-form-field mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"
+        >
+          <div
+            class="mat-form-field-wrapper"
+          >
+            <div
+              class="mat-form-field-flex"
+            >
+              
+              
+              <div
+                class="mat-form-field-infix"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-required="false"
+                  class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
+                  matinput=""
+                  type="text"
+                />
+                <span
+                  class="mat-form-field-label-wrapper"
+                >
+                  <label
+                    class="mat-form-field-label mat-empty mat-form-field-empty"
+                  >
+                    
+                    <mat-label>
+                      String Id
+                    </mat-label>
+                    
+                    
+                  </label>
+                  
+                </span>
+              </div>
+              
+            </div>
+            <div
+              class="mat-form-field-underline"
+            >
+              <span
+                class="mat-form-field-ripple"
+              />
+            </div>
+            
+            <div
+              class="mat-form-field-subscript-wrapper"
+            >
+              
+              <div
+                class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages"
+                style="opacity:1;transform:translateY(0%);0:opacity;1:transform;"
+              >
+                
+                <div
+                  class="mat-form-field-hint-spacer"
+                />
+              </div>
+              
+            </div>
+          </div>
+        </mat-form-field>
+        <mat-form-field
+          appearance="fill"
+          class="mat-form-field mat-primary mat-form-field-type-mat-input mat-form-field-appearance-fill mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-untouched ng-pristine ng-valid"
+        >
+          <div
+            class="mat-form-field-wrapper"
+          >
+            <div
+              class="mat-form-field-flex"
+            >
+              
+              
+              <div
+                class="mat-form-field-infix"
+              >
+                <input
+                  aria-invalid="false"
+                  aria-required="false"
+                  class="mat-input-element mat-form-field-autofill-control ng-untouched ng-pristine ng-valid cdk-text-field-autofill-monitored"
+                  matinput=""
+                  type="text"
+                />
+                <span
+                  class="mat-form-field-label-wrapper"
+                >
+                  <label
+                    class="mat-form-field-label mat-empty mat-form-field-empty"
+                  >
+                    
+                    <mat-label>
+                      String Value
+                    </mat-label>
+                    
+                    
+                  </label>
+                  
+                </span>
+              </div>
+              
+            </div>
+            <div
+              class="mat-form-field-underline"
+            >
+              <span
+                class="mat-form-field-ripple"
+              />
+            </div>
+            
+            <div
+              class="mat-form-field-subscript-wrapper"
+            >
+              
+              <div
+                class="mat-form-field-hint-wrapper ng-trigger ng-trigger-transitionMessages"
+                style="opacity:1;transform:translateY(0%);0:opacity;1:transform;"
+              >
+                
+                <div
+                  class="mat-form-field-hint-spacer"
+                />
+              </div>
+              
+            </div>
+          </div>
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions
+        class="mat-card-actions"
+      >
+        <button
+          class="mat-focus-indicator mat-button mat-button-base"
+          mat-button=""
+        >
+          <span
+            class="mat-button-wrapper"
+          >
+            Save String
+          </span>
+          <span
+            class="mat-ripple mat-button-ripple"
+            matripple=""
+          />
+          <span
+            class="mat-button-focus-overlay"
+          />
+        </button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card
+      class="mat-card mat-focus-indicator existing-strings"
+    >
+      <mat-card-title
+        class="mat-card-title"
+      >
+        Strings
+      </mat-card-title>
+      <mat-card-content
+        class="mat-card-content"
+      >
+        <mat-progress-bar
+          aria-valuemax="100"
+          aria-valuemin="0"
+          class="mat-progress-bar mat-primary"
+          mode="indeterminate"
+          role="progressbar"
+          tabindex="-1"
+        >
+          <div
+            aria-hidden="true"
+          >
+            <svg
+              class="mat-progress-bar-background mat-progress-bar-element"
+              focusable="false"
+              height="4"
+              width="100%"
+            >
+              <defs>
+                <pattern
+                  height="4"
+                  patternUnits="userSpaceOnUse"
+                  width="8"
+                  x="4"
+                  y="0"
+                >
+                  <circle
+                    cx="2"
+                    cy="2"
+                    r="2"
+                  />
+                </pattern>
+              </defs>
+              <rect
+                fill="url('/#mat-progress-bar-0')"
+                height="100%"
+                width="100%"
+              />
+            </svg>
+            <div
+              class="mat-progress-bar-buffer mat-progress-bar-element"
+            />
+            <div
+              class="mat-progress-bar-primary mat-progress-bar-fill mat-progress-bar-element"
+              style="transform: scale3d(0, 1, 1);"
+            />
+            <div
+              class="mat-progress-bar-secondary mat-progress-bar-fill mat-progress-bar-element"
+            />
+          </div>
+        </mat-progress-bar>
+        
+        
+      </mat-card-content>
+    </mat-card>
+  </div>,
 }
 `;

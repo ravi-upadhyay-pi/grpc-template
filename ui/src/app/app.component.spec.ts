@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, tick, fakeAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -9,6 +9,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+
+jest.mock('../generated/Grpc_templateServiceClientPb');
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -30,8 +32,15 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  function bootstrap() {
     const fixture = TestBed.createComponent(AppComponent);
-    expect(fixture.componentInstance).toMatchSnapshot();
-  });
+    fixture.detectChanges();    
+    tick();
+    return fixture;
+  }
+
+  it('should create the app', fakeAsync(() => {
+    const fixture = bootstrap();
+    expect(fixture.debugElement).toMatchSnapshot();
+  }));
 });
