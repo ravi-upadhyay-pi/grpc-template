@@ -1,4 +1,6 @@
+# 
 # Source code management rules
+#
 HOME := $(HOME)
 NPM := $(HOME)/.nodejs/current/bin/npm
 NG := $(HOME)/.nodejs/current/bin/ng
@@ -41,7 +43,9 @@ clean:
 	rm -rf backend/target
 	rm -rf ui/dist
 
+# 
 # Development server rules
+#
 $(NGINX):
 	sudo apt install -y nginx
 
@@ -63,7 +67,9 @@ ui-dev-server: builders-setup generated ui-dependency
 # Parallely run backend and ui: `make dev-server --jobs=2`
 dev-server: builders-setup dev-nginx backend-dev-server ui-dev-server 
 
+# 
 # Release build rules
+#
 test: builders-setup ui-dependency
 	cd ui && $(NPM) run test
 	cd backend && $(CARGO) test
@@ -79,7 +85,9 @@ release: test ui/dist backend/target/release/backend
 	mv ./ui/dist ./release/ui-files
 	mv ./backend/target/release/hello_world ./release/backend-binary
 
+# 
 # Release deployment rules
+#
 deployment: /usr/sbin/nginx hello-world.nginx.conf
 	sudo rm -r ./release/usr/local/bin/helloworld/ui-files
 	sudo rm ./release/usr/local/bin/helloworld/backend-binary

@@ -1,9 +1,9 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { String as ProtoString, Void, Page } from '../generated/grpc_template_pb';
-import { GrpcTemplateClient } from '../generated/Grpc_templateServiceClientPb';
-import { FormControl } from '@angular/forms';
-import { BehaviorSubject } from 'rxjs';
-import { PageEvent } from '@angular/material/paginator';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {PageEvent} from '@angular/material/paginator';
+import {BehaviorSubject} from 'rxjs';
+import {GrpcTemplateClient} from '../generated/Grpc_templateServiceClientPb';
+import {Page, String as ProtoString, Void} from '../generated/grpc_template_pb';
 
 @Component({
   selector: 'app-root',
@@ -20,25 +20,27 @@ export class AppComponent implements OnInit {
   readonly fetchingStrings = new BehaviorSubject(true);
 
   constructor() {
-    this.client = new GrpcTemplateClient("");
+    this.client = new GrpcTemplateClient('');
   }
 
   async ngOnInit() {
-    const count = (await this.client.getStringsCount(new Void(), null)).getStringsCount();
+    const count = (await this.client.getStringsCount(
+        new Void(), null)).getStringsCount();
     this.existingStringsCount.next(count);
     const page = new Page();
     page.setPageNumber(1);
     page.setPageSize(5);
-    this.strings.next((await this.client.getStrings(page, null)).getStringList());
+    this.strings.next(
+        (await this.client.getStrings(page, null)).getStringList());
     this.fetchingStrings.next(false);
   }
 
   async saveString() {
     await this.client.saveString(
-      new ProtoString()
-        .setId(this.newStringId.value ?? '')
-        .setString(this.newStringValue.value ?? ''), 
-      null);
+        new ProtoString()
+            .setId(this.newStringId.value ?? '')
+            .setString(this.newStringValue.value ?? ''),
+        null);
   }
 
   async updatePage(event: PageEvent) {
@@ -46,7 +48,8 @@ export class AppComponent implements OnInit {
     request.setPageNumber(event.pageIndex);
     request.setPageSize(event.pageSize);
     this.fetchingStrings.next(true);
-    this.strings.next((await this.client.getStrings(request, null)).getStringList());
+    this.strings.next(
+        (await this.client.getStrings(request, null)).getStringList());
     this.fetchingStrings.next(false);
   }
 }
