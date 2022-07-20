@@ -12,8 +12,6 @@ ui/dist-ssr
 ui/*.local
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
@@ -21,3 +19,4 @@ ui/*.local
 *.njsproj
 *.sln
 *.sw?
+*.log
