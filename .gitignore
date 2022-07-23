@@ -19,3 +19,11 @@ ui/*.local
 *.njsproj
 *.sln
 *.sw?
+
+# bazel
+bazel-bin
+bazel-grpc-template
+bazel-out
+bazel-testlogs
+
+# temp

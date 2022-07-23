@@ -2,7 +2,8 @@
 	"recommendations": [
 		"dbaeumer.vscode-eslint",
 		"statiolake.vscode-rustfmt",
-		"eamodio.gitlens"
+		"eamodio.gitlens",
+		"DevonDCarew.bazel-code"
 	],
 	"unwantedRecommendations": [
 	]
